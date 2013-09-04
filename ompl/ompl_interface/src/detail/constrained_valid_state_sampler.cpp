@@ -70,6 +70,7 @@ bool ompl_interface::ValidConstrainedSampler::project(ompl::base::State *state)
 
 bool ompl_interface::ValidConstrainedSampler::sample(ob::State *state)
 {
+  std::cout << "ValidConstrainedSampler is sampling" << std::endl;
   //  moveit::Profiler::ScopedBlock pblock("ValidConstrainedSampler::sample");
   if (constraint_sampler_)
   {
@@ -95,6 +96,7 @@ bool ompl_interface::ValidConstrainedSampler::sample(ob::State *state)
 
 bool ompl_interface::ValidConstrainedSampler::sampleNear(ompl::base::State *state, const ompl::base::State *near, const double distance)
 {
+  std::cout << "ValidConstrainedSampler is sampling near" << std::endl;
   if (!sample(state))
     return false;
   double total_d = si_->distance(state, near);

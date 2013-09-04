@@ -57,6 +57,7 @@ double ompl_interface::ConstrainedSampler::getConstrainedSamplingRate() const
 
 bool ompl_interface::ConstrainedSampler::sampleC(ob::State *state)
 {
+  std::cout << "ConstrainedSampler sampleC" << std::endl;
   //  moveit::Profiler::ScopedBlock sblock("sampleWithConstraints");
 
   if (constraint_sampler_->sample(work_joint_group_state_, planning_context_->getCompleteInitialRobotState(), planning_context_->getMaximumStateSamplingAttempts()))

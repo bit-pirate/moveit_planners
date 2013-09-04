@@ -60,6 +60,7 @@ ompl_interface::ConstrainedGoalSampler::ConstrainedGoalSampler(const ModelBasedP
 
 bool ompl_interface::ConstrainedGoalSampler::sampleUsingConstraintSampler(const ob::GoalLazySamples *gls, ob::State *newGoal)
 {
+  std::cout << "ConstrainedGoalSampler::sampleUsingConstraintSampler" << std::endl;
   //  moveit::Profiler::ScopedBlock sblock("ConstrainedGoalSampler::sampleUsingConstraintSampler");
 
   unsigned int max_attempts = planning_context_->getMaximumGoalSamplingAttempts();
